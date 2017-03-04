@@ -20,12 +20,30 @@ p{
   padding: 10px;
 }
 
+@keyframes fadeInOut {
+  0% {transform: none;}
+  50%{color: transparent;}
+  100% {transform: none;}
+}
+
+#loadInInstructions {
+  width: 90%;
+  font-size: 10px;
+  text-align: center;
+  animation-name: fadeInOut;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+
 .selection {
   margin-left: 15px;
 }
 
 #nameQuestion{
   width: 50%;
+  margin-top: -7px;
 }
 
 #welcomeQuote{
@@ -194,7 +212,23 @@ p{
   bottom: 0;
 }
 
+@keyframes slideInToLeft {
+  0% {left: 432px;
+    filter: brightness(0%)}
+  100% {transform: none;}
+}
+
 #playerPokemon {
+  position:absolute; 
+  height:230px; 
+  width:230px; 
+  bottom:120px; 
+  left:30px;
+  animation-name: slideInToLeft;
+  animation-duration: 1.5s;
+}
+
+#playerPokemonStatic {
   position:absolute; 
   height:230px; 
   width:230px; 
@@ -220,12 +254,28 @@ p{
   top: 110px;
 }
 
+@keyframes slideInToRight {
+  0% {right: 461px;
+    filter: brightness(0%);}
+  100% {transform: none;}
+}
+
+#opponantPokemonStatic{
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  right: 31px;
+  top: 68px;
+}
+
 #opponantPokemon{
   position: absolute;
   width: 160px;
   height: 160px;
   right: 31px;
-  top: 68px; 
+  top: 68px;
+  animation-name: slideInToRight;
+  animation-duration: 1.5s;
 }
 
 #opponant_pok_name{
@@ -236,10 +286,12 @@ p{
 }
 
 #move_text {
+  font-size: 22px;
   position: absolute;
   left: 30px;
-  bottom: 100px;
+  bottom: 40px;
   width: 450px;
+  line-height: 30px;
 }
 
 #opponant_pok_hp{
@@ -293,9 +345,9 @@ p{
 }
 
 @keyframes example {
-    0% {transform:rotate(15deg);}
-    50%{transform:rotate(-15deg);}
-    100% {transform:rotate(15deg);}
+  0% {transform:rotate(15deg);}
+  50%{transform:rotate(-15deg);}
+  100% {transform:rotate(15deg);}
 }
 
 #win_matthew{
@@ -363,17 +415,17 @@ p{
   top: 40px;
   left: 10px;
   background-image: url("/img/villainbar.png");
-}*/
+  }*/
 
-.opponant_div {
-  display: block;
-  position: absolute;
-  width: 280px;
-  height: 49px;
-  top: 0;
-  left: 345px;
-  /*background-image: url("/img/herobar.png");*/
-  background-size:100% 100%;
+  .opponant_div {
+    display: block;
+    position: absolute;
+    width: 280px;
+    height: 49px;
+    top: 0;
+    left: 345px;
+    /*background-image: url("/img/herobar.png");*/
+    background-size:100% 100%;
   /*border-left: solid black;
   border-bottom: solid black;*/
 }
