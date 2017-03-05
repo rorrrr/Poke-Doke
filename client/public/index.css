@@ -568,7 +568,23 @@ p{
   left:90px;
 }
 
+@keyframes rotatoes {
+  0% {transform: none;}
+  100% {transform: rotate(360deg);}
+}
+
 #gymBadge{
+  height: 30%;
+  width: 30%;
+  position: absolute;
+  left: 325px;
+  top: 183px;
+  animation-name: rotatoes;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+}
+
+#typeBadge{
   height: 30%;
   width: 30%;
   position: absolute;
